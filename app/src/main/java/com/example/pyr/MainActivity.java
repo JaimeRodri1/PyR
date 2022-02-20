@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup selec;
     int contador = 1;
     int puntaje = 0;
+    int N;
+    int F;
 
 
     @Override
@@ -49,10 +51,8 @@ public class MainActivity extends AppCompatActivity {
         p2= findViewById(R.id.RB2);
         p3= findViewById(R.id.RB3);
 
-        p1.setText("China");
-        p2.setText("Alemania");
-        p3.setText("Brazil");
-        band.setImageResource(R.drawable.ale);
+
+        imprimir();
 
 
         p1.setTextColor(ContextCompat.getColor(getBaseContext(),R.color.white));
@@ -86,8 +86,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 evaluarRespuestas();
-                imprimir();
                 contador++;
+                imprimir();
+
 
             }
         });
@@ -129,47 +130,60 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
     public void evaluarRespuestas(){
 
         if (contador==1){
-            if (p2.isChecked()){
+            if (p2.isChecked()==true){
                 puntaje = puntaje + 1;
+                N++;
             }
             else{
                 puntaje= puntaje-2;
+                F++;
             }
         }
 
         if (contador==2){
-            if (p3.isChecked()){
+            if (p3.isChecked()==true){
                 puntaje = puntaje+1;
+                N++;
             }
             else{
                 puntaje= puntaje - 2;
+                F++;
             }
         }
         if (contador==3){
-            if (p2.isChecked()){
+            if (p2.isChecked()==true){
                 puntaje = puntaje + 1;
+                N++;
             }
             else{
                 puntaje= puntaje - 2;
+                F++;
             }
         }
         if (contador==4){
-            if (p3.isChecked()){
+            if (p3.isChecked()==true){
                 puntaje = puntaje + 1;
+                N++;
             }
             else{
                 puntaje= puntaje - 2;
+                F++;
             }
         }
 
     }
     public void imprimir() {
 
+        if (contador==1){
+            selec.clearCheck();
+            p1.setText("China");
+            p2.setText("Alemania");
+            p3.setText("Brazil");
+            band.setImageResource(R.drawable.ale);
+        }
 
         if (contador==2){
             selec.clearCheck();
@@ -199,6 +213,8 @@ public class MainActivity extends AppCompatActivity {
             selec.clearCheck();
             Intent d = new Intent(getApplicationContext(),resultado.class);
             d.putExtra("puntaje",puntaje);
+            d.putExtra("aciertos",N);
+            d.putExtra("fallos",F);
             startActivity(d);
             finish();
         }

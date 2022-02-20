@@ -14,31 +14,79 @@
         android:text="Salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.684" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <TextView
-        android:id="@+id/result"
-        android:layout_width="68dp"
-        android:layout_height="50dp"
+        android:id="@+id/acier"
+        android:layout_width="64dp"
+        android:layout_height="38dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:autoSizeTextType="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54" />
+        app:layout_constraintVertical_bias="0.467" />
+
+    <TextView
+        android:id="@+id/Fails"
+        android:layout_width="59dp"
+        android:layout_height="33dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="364dp"
-        android:layout_height="366dp"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/res"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="64dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="400dp"
+        android:layout_height="485dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/res" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="155dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/puntaje" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="72dp"
+        android:layout_height="38dp"
+        android:text="TextView"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
